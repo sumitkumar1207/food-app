@@ -17,7 +17,6 @@ class App extends Component {
     const api_call = await fetch(`https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=shredded%20${recipeName}`)
 
     const data = await api_call.json();
-    console.log('data :', data);
     this.setState({ recipes: data.recipes });
     // document.getElementById("create-food-form").reset();
   }
@@ -29,7 +28,6 @@ class App extends Component {
       const recipes = JSON.parse(json);
       this.setState({ recipes });
     }
-
   }
 
   componentDidUpdate = () => {
