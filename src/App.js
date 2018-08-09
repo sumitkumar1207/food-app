@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form';
 import Recipes from './components/Recipes';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 const API_KEY = '8a96860ad80517ebb4e68f3f7c3f59ae';
 
@@ -38,13 +40,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Food-App</h1>
-          <a href="https://github.com/sumitkumar1207" target="_blank">Get The Code
-          </a>
-        </header>
+        <Header />
         <Form getRecipe={this.getRecipe} />
         <Recipes recipes={this.state.recipes} />
+        <Footer />
       </div>
     );
   }
